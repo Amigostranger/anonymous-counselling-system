@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.HomeFragment"
+    android:gravity="center_horizontal"
+    app:backgroundTint="@null">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="20dp" >
+
+        <RelativeLayout
+            android:id="@+id/mom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/layout_Header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblusername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Hello Massamba"
+                    android:textSize="25dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_Quote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_Header"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lblQuote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginHorizontal="15dp"
+                    android:elevation="5dp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Quote of the Day"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginVertical="15dp"
+                    android:background="@drawable/quote"
+                    android:elevation="10dp"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/lblMessage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_semibold"
+                        android:textColor="@color/white"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/lblAuthor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_semibold"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/white"
+                        android:textSize="17sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_Feeling"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_Quote"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lblfeelings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="How are you feeling today?"
+                    android:textSize="20sp" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:tag="img1"
+                            android:id="@+id/imgHappy"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:contentDescription="img"
+                            app:srcCompat="@drawable/happy"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                        <ImageView
+                            android:tag="img2"
+                            android:id="@+id/imgSad"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:contentDescription="img"
+                            app:srcCompat="@drawable/sad"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                        <ImageView
+                            android:tag="img3"
+                            android:id="@+id/imgDelighted"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:contentDescription="img"
+                            app:srcCompat="@drawable/delighted"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                        <ImageView
+                            android:tag="img4"
+                            android:id="@+id/imgAnnoyed"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:contentDescription="img"
+                            app:srcCompat="@drawable/annoyed"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                        <ImageView
+                            android:tag="img5"
+                            android:id="@+id/imgFurious"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:contentDescription="img"
+                            app:srcCompat="@drawable/furious"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/lblHappy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:fontFamily="@font/inter_semibold"
+                            android:text="Happy"
+                            android:textAlignment="center"
+                            android:textSize="15sp"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                        <TextView
+                            android:id="@+id/lblSad"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:fontFamily="@font/inter_semibold"
+                            android:text="Sad"
+                            android:textAlignment="center"
+                            android:textSize="15sp"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                        <TextView
+                            android:id="@+id/lblDelighted"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:fontFamily="@font/inter_semibold"
+                            android:text="Delighted"
+                            android:textAlignment="center"
+                            android:textSize="15sp"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                        <TextView
+                            android:id="@+id/lblAnnoyed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:fontFamily="@font/inter_semibold"
+                            android:text="Annoyed"
+                            android:textAlignment="center"
+                            android:textSize="15sp"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                        <TextView
+                            android:id="@+id/lblFurious"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:fontFamily="@font/inter_semibold"
+                            android:text="Furious"
+                            android:textAlignment="center"
+                            android:textSize="15sp"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:tag="img6"
+                            android:id="@+id/imgSuspicious"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:contentDescription="img"
+                            app:srcCompat="@drawable/suspicious"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                        <ImageView
+                            android:tag="img7"
+                            android:id="@+id/imgShocked"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:contentDescription="img"
+                            app:srcCompat="@drawable/shocked"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                        <ImageView
+                            android:tag="img8"
+                            android:id="@+id/imgBetrayed"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:contentDescription="img"
+                            app:srcCompat="@drawable/betrayed"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                        <ImageView
+                            android:tag="img9"
+                            android:id="@+id/imgConfused"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:contentDescription="img"
+                            app:srcCompat="@drawable/confused"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                        <ImageView
+                            android:tag="img10"
+                            android:id="@+id/imgUnsure"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:contentDescription="img"
+                            app:srcCompat="@drawable/unsure"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/lblSuspicious"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="6dp"
+                            android:fontFamily="@font/inter_semibold"
+                            android:text="Suspicious"
+                            android:textAlignment="center"
+                            android:textSize="15sp"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                        <TextView
+                            android:id="@+id/lblShocked"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="6dp"
+                            android:fontFamily="@font/inter_semibold"
+                            android:text="Shocked"
+                            android:textAlignment="center"
+                            android:textSize="15sp"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                        <TextView
+                            android:id="@+id/lblBetrayed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="6dp"
+                            android:fontFamily="@font/inter_semibold"
+                            android:text="Betrayed"
+                            android:textAlignment="center"
+                            android:textSize="15sp"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                        <TextView
+                            android:id="@+id/lblConfused"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="6dp"
+                            android:fontFamily="@font/inter_semibold"
+                            android:text="Confused"
+                            android:textAlignment="center"
+                            android:textSize="15sp"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                        <TextView
+                            android:id="@+id/lblUnsure"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="6dp"
+                            android:fontFamily="@font/inter_semibold"
+                            android:text="Unsure"
+                            android:textAlignment="center"
+                            android:textSize="15sp"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </TableRow>
+
+                </TableLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layout_TalkAbout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_Feeling"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lblTalkAbout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="What do you want to talk about?"
+                    android:textSize="20dp" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:tag="txt1"
+                            android:id="@+id/lblRelationships"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/btnchat"
+                            android:fontFamily="@font/inter_semibold"
+                            android:padding="5dp"
+                            android:text="Relationships"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            app:backgroundTint="@null"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                        <TextView
+                            android:tag="txt2"
+                            android:id="@+id/lblSelf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/btnchat"
+                            android:fontFamily="@font/inter_semibold"
+                            android:padding="5dp"
+                            android:text="Self"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            app:backgroundTint="@null"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                        <TextView
+                            android:tag="txt3"
+                            android:id="@+id/lblFamily"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/btnchat"
+                            android:fontFamily="@font/inter_semibold"
+                            android:padding="5dp"
+                            android:text="Family"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            app:backgroundTint="@null"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                        <TextView
+                            android:tag="txt4"
+                            android:id="@+id/lblFriends"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/btnchat"
+                            android:fontFamily="@font/inter_semibold"
+                            android:padding="5dp"
+                            android:text="Friends"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            app:backgroundTint="@null"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:tag="txt5"
+                            android:id="@+id/lblDepression"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/btnchat"
+                            android:fontFamily="@font/inter_semibold"
+                            android:padding="5dp"
+                            android:text="Depression"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            app:backgroundTint="@null"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                        <TextView
+                            android:tag="txt6"
+                            android:id="@+id/lblAcademics"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/btnchat"
+                            android:fontFamily="@font/inter_semibold"
+                            android:padding="5dp"
+                            android:text="Academics"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            app:backgroundTint="@null"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                        <TextView
+                            android:tag="txt7"
+                            android:id="@+id/lblLoss"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/btnchat"
+                            android:fontFamily="@font/inter_semibold"
+                            android:padding="5dp"
+                            android:text="Loss"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            app:backgroundTint="@null"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                        <TextView
+                            android:tag="txt8"
+                            android:id="@+id/lblRandom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/btnchat"
+                            android:fontFamily="@font/inter_semibold"
+                            android:padding="5dp"
+                            android:text="Random"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            app:backgroundTint="@null"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </TableLayout>
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/TalkItOut"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/layout_TalkAbout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lblTalkItOut"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Talk It Out"
+                    android:textSize="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/btnChat"
+                    android:layout_width="349dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:background="@drawable/btnchat"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="New Chat"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    app:backgroundTint="@null"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblTalkItOut" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
